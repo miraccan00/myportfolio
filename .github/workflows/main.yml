@@ -19,9 +19,12 @@ jobs:
 
       - name: Install dependencies
         run: npm install --legacy-peer-deps
-
-      - name: Build and export Next.js app
-        run: npm run build && npm run start
+      - name: What İs My İp
+        run: curl ifconfig.me
+      - name: Build Application
+        run: npm run build 
+      - name: Run Application
+        run: npm run start
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
