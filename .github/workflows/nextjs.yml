@@ -72,9 +72,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: npm install --legacy-peer-deps
       - name: Build with Next.js
-        run: yarn build --frozen-lockfile
+        run: npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
