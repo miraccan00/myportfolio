@@ -23,8 +23,8 @@ jobs:
         run: curl ifconfig.me
       - name: Build Application
         run: npm run build 
-      - name: Run Application
-        run: npm run start
+    #   - name: Run Application
+    #     run: npm run start
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
